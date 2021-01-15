@@ -1,8 +1,74 @@
 <html>
-  <head></head>
-  <body>
-    <div id="display_here"></div>
 
-    <script src="./petshop.js"></script>
-  </body>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="shortcut icon" href="#">
+  <title>PetShop</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Pet Shop!</h1>
+    <div class="row">
+      <div class="col-md">
+        <h2 class="text-center">Find Pet</h2>
+        <label for="PETID">Search by Pet ID</label>
+        <input type="number" class="form-control" id="PETID" placeholder="Pet ID: " name="petID" />
+        <br />
+        <button class="btn btn-primary text-center" id="find_button" onclick="find()">Find</button>
+      </div>
+      <div class="col-md">
+        <h2 class="text-center">Create a Pet</h2>
+        <label for="petId">Set Pet ID</label>
+        <input id="petId" type="text" class="form-control" placeholder="Enter pet ID: " />
+        <br />
+        <label for="petId2">Set Pet Category ID</label>
+        <input id="petId2" type="text" class="form-control" placeholder="Enter pet category ID: " />
+        <br />
+        <label for="petCatname">Set Pet Category Name</label>
+        <input id="petCatname" type="text" class="form-control" placeholder="Enter your pet category name: " />
+        <br />
+        <label for="petName">Set Pet Name</label>
+        <input id="petName" type="text" class="form-control" placeholder="Enter your pet name: " />
+        <br />
+        <label for="petStatus">Set Pet Status</label>
+        <input id="petStatus" type="text" class="form-control" placeholder="Enter pet availability: " />
+        <br />
+        <button class="btn btn-primary text-center" id="create" onclick="createPet()">Create Pet</button>
+        <br />
+      </div>
+      <div class="col-md">
+        <h2 class="text-center">Update a Pet</h2>
+        <label for="id">Pet ID to Update</label>
+        <input id="id" type="text" class="form-control" placeholder="ID" />
+        <br />
+        <label for="name">Pet Name</label>
+        <input id="name" type="text" class="form-control" placeholder="Name" />
+        <br />
+        <label for="status">Pet Status</label>
+        <input id="status" type="text" class="form-control" placeholder="Status" />
+        <br />
+        <button class="btn btn-primary text-center" onclick="update()">Update</button>
+      </div>
+      <div class="col-md">
+        <h2 class="text-center">Delete a Pet</h2>
+        <label for="id2">Pet ID</label>
+        <input id="id2" type="text" class="form-control" placeholder="ID" />
+        <br />
+        <button class="btn btn-primary text-center" onclick="del()">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col=md">
+      <div class="pet-info">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./petshop.js"></script>
+</body>
+
 </html>
